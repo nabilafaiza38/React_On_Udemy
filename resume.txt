@@ -1,0 +1,21 @@
+Il s'agit de declaration de code javascript
+-Creation d'un projet: npx create-react-app my-app 
+-Lancement: npm start
+-Composant interessant  d'un projet:
+    -Dossier Src: contient le code source de l'app
+    -Package.json: contient les dépendances
+-Comment React fonctionne:
+    -Creaction de ses propre element HTML
+    -On parle "de composant"
+    ( à finir)
+- Le passage de  parametre via props:
+<ExpenseItem
+        title="BigTitle"
+      />
+
+        function ExpenseItem(props) {
+        return (
+           <h2>{props.title}</h2>
+         );
+        }
+
