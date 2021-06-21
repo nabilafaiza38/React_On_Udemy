@@ -9,7 +9,7 @@ Il s'agit de declaration de code javascript
     -On parle "de composant"
     ( à finir)
 - Le passage de  parametre via props:
-<ExpenseItem
+      <ExpenseItem
         title="BigTitle"
       />
 
@@ -18,4 +18,38 @@ Il s'agit de declaration de code javascript
            <h2>{props.title}</h2>
          );
         }
+-Utilisation des Hook:
+  -useState:
+              import React, {useState} from 'react';
+              const [title, setTitle] = useState('title init");
+
+              setTitle("new title")
+              <h2>{title}</h2>
+  -Utilisation d'un seul state ou state multiple:(a revoir)
+-Communication parent to child: avec props
+-Communication child to parent: avec un pointage vers une fonction
+  -Parent:
+           const [DateFilter,SetDateFilter]=  useState('2020')
+            const filterChangeHandler=(selectedDate)=> {
+              console.log(selectedDate)
+              SetDateFilter(selectedDate)
+            }
+
+           <ExpensesFilter selected={DateFilter} onChangeFilter={filterChangeHandler} ></ExpensesFilter>
+  -Child:
+          const ExpensesFilter = (props) => {
+          const ChangeDateFilterHandler  = (event) =>{
+              props.onChangeFilter(event.target.value);
+              console.log(event.target.value)
+          }
+
+          <select onChange={ChangeDateFilterHandler} value={props.selected}>
+-Controlled vs UnControlled component:
+    -Un composant Controlled est un composant qui prend sa valeur actuelle  via "props" et notifie les modifications via des rappels tels que onChange
+    -Un composant UnControlled est un composant qui stocke son propre état en interne et vous interrogez le DOM à l'aide d'un refpour trouver sa valeur actuelle lorsque vous en avez besoin.
+-Statefull vs Stateless component:
+    Lorsqu'un composant  contient un état ou plusieurs: " useState" il est alors Statefull sinon il est Stateless
+  
+
+            
 
