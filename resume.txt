@@ -49,7 +49,12 @@ Il s'agit de declaration de code javascript
     -Un composant UnControlled est un composant qui stocke son propre état en interne et vous interrogez le DOM à l'aide d'un refpour trouver sa valeur actuelle lorsque vous en avez besoin.
 -Statefull vs Stateless component:
     Lorsqu'un composant  contient un état ou plusieurs: " useState" il est alors Statefull sinon il est Stateless
-  
+-Keys:
+Les clés aident React à identifier quels éléments d’une liste ont changé, ont été ajoutés ou supprimés.
+-Rendering conditionnal content:
+      Meth1: condition ? Content1 : ElseContent
+      Meth2: condition &&  Content1 
+             !condition && ElseContent
 
             
 
